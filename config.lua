@@ -4,16 +4,16 @@ Config = {}
 Config.isRDR = IsDuplicityVersion() and GetConvar("gamename", "gta5") == "rdr3" or not TerraingridActivate
 
 -- Max distance at which inactive media player entities appear
-Config.maxDiscoveryDistance = 30.0
+Config.maxDiscoveryDistance = 400.0
 
 -- Default sound attenuation multiplier when in the same room
-Config.defaultSameRoomAttenuation = 4.0
+Config.defaultSameRoomAttenuation = 0.0
 
 -- Default sound attenuation multiplier when in a different room
-Config.defaultDiffRoomAttenuation = 6.0
+Config.defaultDiffRoomAttenuation = 4.0
 
 -- Default range where active media players are visible/audible
-Config.defaultRange = 30.0
+Config.defaultRange = 80.0
 
 -- Maximum range that players can set
 Config.maxRange = 200.0
@@ -67,28 +67,36 @@ Config.defaultVideoSize = 30
 --
 Config.models = {
 	[`p_phonograph01x`]  = {
-		label = "Phonograph"
+		label = "Phonograph",
+		filter = true,
 	},
 	[`prop_radio_01`] = {
-		label = "Radio"
+		label = "Radio",
+		filter = true,
 	},
 	[`prop_boombox_01`] = {
-		label = "Boombox"
+		label = "Boombox",
+		filter = false,
+	},
+	[`xm3_prop_xm3_boombox_01a`] = {
+		label = "Boombox",
+		filter = false,
+	},
+	[`v_ind_cs_hifi`] = {
+		label = "Stereo",
+		filter = false,
 	},
 	[`prop_portable_hifi_01`] = {
-		label = "Boombox"
-	},
-	[`prop_ghettoblast_01`] = {
-		label = "Boombox"
-	},
-	[`prop_ghettoblast_02`] = {
-		label = "Boombox"
+		label = "Stereo",
+		filter = false,
 	},
 	[`prop_tapeplayer_01`] = {
-		label = "Tape Player"
+		label = "Tape Player",
+		filter = true,
 	},
 	[`bkr_prop_clubhouse_jukebox_01a`] = {
-		label = "Jukebox"
+		label = "Jukebox",
+		filter = false,
 	},
 	[`bkr_prop_clubhouse_jukebox_01b`] = {
 		label = "Jukebox"
@@ -119,6 +127,66 @@ Config.models = {
 	},
 	[`sm_prop_smug_radio_01`] = {
 		label = "Radio"
+	},
+	[`prop_tay_guitar_001`] = {
+		label = "Accoustic Guitar Pink",
+		filter = true,
+	},
+	[`prop_tay_guitar_002`] = {
+		label = "Accoustic Guitar Pride",
+		filter = true,
+	},
+	[`prop_acc_guitar_01`] = {
+		label = "Accoustic Guitar",
+		filter = true,
+	},
+	[`prop_acc_guitar_01_d1`] = {
+		label = "Accoustic Guitar",
+		filter = true,
+	},
+	[`sf_prop_sf_acc_guitar_01a`] = {
+		label = "Accoustic Guitar",
+		filter = true,
+	},
+	[`prop_el_guitar_01`] = {
+		label = "Electric Guitar",
+		filter = false,
+	},
+	[`prop_el_guitar_02`] = {
+		label = "Electric Guitar",
+		filter = false,
+	},
+	[`prop_el_guitar_03`] = {
+		label = "Electric Guitar",
+		filter = false,
+	},
+	[`vw_prop_casino_art_guitar_01a`] = {
+		label = "Electric Guitar",
+		filter = false,
+	},
+	[`bkr_int_02_elec_guitar`] = {
+		label = "Electric Guitar",
+		filter = false,
+	},
+	[`sf_prop_sf_el_guitar_01a`] = {
+		label = "Electric Guitar",
+		filter = false,
+	},
+	[`sf_prop_sf_el_guitar_02a`] = {
+		label = "Electric Guitar",
+		filter = false,
+	},
+	[`sf_prop_sf_el_guitar_03a`] = {
+		label = "Electric Guitar",
+		filter = false,
+	},
+	[`rpemotes_prop_saxophone01`] = {
+		label = "Saxophone",
+		filter = false,
+	},
+	[`rpemotes_prop_saxophone02`] = {
+		label = "Saxophone",
+		filter = false,
 	},
 	[`ex_prop_ex_tv_flat_01`] = {
 		label = "TV",
@@ -152,6 +220,14 @@ Config.models = {
 		label = "Monitor",
 		renderTarget = "tvscreen"
 	},
+	[`m23_2_prop_m32_crt_mon_01a`] = {
+		label = "Monitor",
+		renderTarget = "m32_crtscreen_01a"
+	},
+	[`m23_2_prop_m32_desktop_01a`] = {
+		label = "Monitor",
+		renderTarget = "m32_desktop_01a"
+	},
 	[`hei_prop_dlc_tablet`] = {
 		label = "Tablet",
 		renderTarget = "tablet"
@@ -171,6 +247,26 @@ Config.models = {
 	[`prop_tv_03_overlay`] = {
 		label = "TV",
 		renderTarget = "tvscreen"
+	},
+	[`prop_tv_04`] = {
+		label = "TV",
+		renderTarget = "tvscreen"
+	},
+	[`prop_tv_test`] = {
+		label = "TV",
+		renderTarget = "tvscreen"
+	},
+	[`prop_tv_05`] = {
+		label = "TV",
+		renderTarget = "tvscreen"
+	},
+	[`prop_tv_06`] = {
+		label = "TV",
+		renderTarget = "tvscreen"
+	},
+	[`prop_tv_07`] = {
+		label = "TV",
+		renderTarget = "tv_screen_02b"
 	},
 	[`prop_laptop_lester2`] = {
 		label = "Laptop",
@@ -388,6 +484,14 @@ Config.models = {
 		label = "TV",
 		renderTarget = "gr_trailertv_02"
 	},
+	[`m23_2_prop_m32_hackdevice_01a`] = {
+		label = "Hack Device",
+		renderTarget = "w_am_hackdevice_m32"
+	},
+	[`m23_2_prop_m32_hackdevice_01a`] = {
+		label = "Hack Device",
+		renderTarget = "w_am_hackdevice_m32"
+	},
 	[`hei_prop_dlc_heist_board`] = {
 		label = "Projector",
 		renderTarget = "heist_brd"
@@ -563,7 +667,7 @@ Config.defaultModel = Config.isRDR and `p_phonograph01x` or `prop_boombox_01`
 -- 	above the entity.
 --
 Config.presets = {
-	--['1'] = {url = 'https://example.com/example.ogg', title = 'Example Preset', filter = true, video = false}
+	['1'] = {url = 'https://live.upbeat.pw//example.ogg', title = 'UpBeat Radio Livestream', filter = false, video = false}
 }
 
 -- These media player entities will be automatically spawned (if they do not
@@ -770,25 +874,30 @@ Config.audioVisualizations = {
 		name = "Blocky Bars"
 	},
 	["cubes"] = {
-		name = "Cubes"
+		name = "Cubes",
+		colors = {"orange", "aqua", "blue", "purple"} -- Order bottom to top. Maximum 4 Colours 
 	},
 	["dualbars"] = {
-		name = "Dual Bars"
+		name = "Dual Bars",
+		colors = {"#ee188c", "#176bed", "#16ec6d", "#5ffd1e", "#dcaa0a"} -- 5 Colours diffRoom, Left To Right
 	},
 	["dualbars blocks"] = {
 		name = "Blocky Dual Bars"
 	},
 	["fireworks"] = {
-		name = "Fireworks"
+		name = "Fireworks",
+		colors = {"#ee188c"} -- Maximum 1 Colour 
 	},
 	["flower"] = {
-		name = "Flower"
+		name = "Flower",
+		colors = {"#ee188c", "#176bed", "#16ec6d", "#5ffd1e", "#dcaa0a"} -- 5 Colours diffRoom, Left To Right
 	},
 	["flower blocks"] = {
 		name = "Blocky Flower"
 	},
 	["orbs"] = {
-		name = "Orbs"
+		name = "Orbs",
+		colors = {"#ee188c","#7611f7"} -- diffRoom 2 Colours 
 	},
 	["ring"] = {
 		name = "Ring"
@@ -803,7 +912,8 @@ Config.audioVisualizations = {
 		name = "Shine"
 	},
 	["shine rings"] = {
-		name = "Shine Rings"
+		name = "Shine Rings",
+		colors = {"#ee188c", "#176bed", "#16ec6d", "#5ffd1e", "#dcaa0a"}
 	},
 	["shockwave"] = {
 		name = "Shockwave"
@@ -850,5 +960,6 @@ Config.autoDisableVehicleRadio = true
 Config.allowedUrls = {
 	"^https?://w?w?w?%.?youtube.com/.*$",
 	"^https?://w?w?w?%.?youtu.be/.*$",
-	"^https?://w?w?w?%.?twitch.tv/.*$"
+	"^https?://w?w?w?%.?twitch.tv/.*$",
+    "^https?://w?w?w?%.?kick.com/.*$"
 }
