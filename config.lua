@@ -13,13 +13,13 @@ Config.defaultSameRoomAttenuation = 0.0
 Config.defaultDiffRoomAttenuation = 4.0
 
 -- Default range where active media players are visible/audible
-Config.defaultRange = 80.0
+Config.defaultRange = 50.0
 
 -- Maximum range that players can set
-Config.maxRange = 200.0
+Config.maxRange = 30.0
 
 -- Difference between the base volume in the same room and a different room
-Config.defaultDiffRoomVolume = 0.25
+Config.defaultDiffRoomVolume = 0.30
 
 -- Whether the filter options is enabled by default
 Config.enableFilterByDefault = Config.isRDR
@@ -667,7 +667,8 @@ Config.defaultModel = Config.isRDR and `p_phonograph01x` or `prop_boombox_01`
 -- 	above the entity.
 --
 Config.presets = {
-	['1'] = {url = 'https://live.upbeat.pw//example.ogg', title = 'UpBeat Radio Livestream', filter = false, video = false}
+	['1'] = {url = 'https://live.upbeat.pw//example.ogg', title = 'UpBeat Radio Livestream', filter = false, video = false},
+	['2'] = {url = 'https://www.youtube.com/watch?v=weh4VLsIHQw', title = 'Megamix Disco House', filter = true, video = false},
 }
 
 -- These media player entities will be automatically spawned (if they do not
