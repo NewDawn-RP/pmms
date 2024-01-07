@@ -7,16 +7,16 @@ Config.isRDR = IsDuplicityVersion() and GetConvar("gamename", "gta5") == "rdr3" 
 Config.maxDiscoveryDistance = 400.0
 
 -- Default sound attenuation multiplier when in the same room
-Config.defaultSameRoomAttenuation = 0.0
+Config.defaultSameRoomAttenuation = 0.3
 
 -- Default sound attenuation multiplier when in a different room
-Config.defaultDiffRoomAttenuation = 4.0
+Config.defaultDiffRoomAttenuation = 0.5
 
 -- Default range where active media players are visible/audible
-Config.defaultRange = 50.0
+Config.defaultRange = 60.0
 
 -- Maximum range that players can set
-Config.maxRange = 30.0
+Config.maxRange = 50.0
 
 -- Difference between the base volume in the same room and a different room
 Config.defaultDiffRoomVolume = 0.30
@@ -667,8 +667,10 @@ Config.defaultModel = Config.isRDR and `p_phonograph01x` or `prop_boombox_01`
 -- 	above the entity.
 --
 Config.presets = {
-	['1'] = {url = 'https://live.upbeat.pw//example.ogg', title = 'UpBeat Radio Livestream', filter = false, video = false},
-	['2'] = {url = 'https://www.youtube.com/watch?v=weh4VLsIHQw', title = 'Megamix Disco House', filter = true, video = false},
+	['1'] = {url = 'https://www.youtube.com/watch?v=weh4VLsIHQw', title = 'Megamix Disco House', filter = true, video = false},
+	['2'] = {url = 'https://www.youtube.com/watch?v=27Wx2Uh1aRs', title = 'K-Rose (GTA:SA)', filter = false, video = false},
+	['3'] = {url = 'https://www.youtube.com/watch?v=B8wt7p9LHOw', title = 'Fever 105 (GTA:VC)', filter = false, video = false},
+	['4'] = {url = 'https://www.youtube.com/watch?v=oC1nc0UqXRc', title = 'Flash FM (GTA:VC)', filter = false, video = false},
 }
 
 -- These media player entities will be automatically spawned (if they do not
@@ -807,7 +809,7 @@ Config.defaultMediaPlayers = {
 }
 
 -- Distance at which default media player entities spawn/despawn
-Config.defaultMediaPlayerSpawnDistance = Config.maxRange + 10.0
+Config.defaultMediaPlayerSpawnDistance = Config.maxRange + 30.0
 
 -- DUI configuration
 Config.dui = {}
